@@ -1,0 +1,14 @@
+# Site settings
+title: Ben Wilcox Portfolio Site
+email: reccanti@gmail.com
+description: > 
+ Welcome to my website! Feel free to look at some of my past 
+ projects or find me on social media.
+baseurl: ""
+projectsurl: "/projects/"
+url: "http://benjwilcox.com" # the base hostname & protocol for your site
+twitter_username: reccanti
+github_username:  recanti
+
+# Build settings
+markdown: kramdown
