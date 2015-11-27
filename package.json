@@ -1,0 +1,19 @@
+{
+  "name": "portfoliov4",
+  "version": "1.0.0",
+  "description": "a remake of my portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recanti/PortfolioV4.git"
+  },
+  "author": "Ben Wilcox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/recanti/PortfolioV4/issues"
+  },
+  "homepage": "https://github.com/recanti/PortfolioV4#readme"
+}

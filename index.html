@@ -4,36 +4,61 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Projects</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.category == "project" %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <nav class="navigation">
+    <h1 class="navigation_header">Ben Wilcox</h1>
+    <h2 class="navigation_subheader">Web Developer and Designer</h2>
+  </nav>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+  <div class="contact">
+    <ul class="contact_list">
+      <li class="contact_icon">
+        <a href="https://twitter.com/reccanti">Twitter</a>
       </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Blog</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.category == "blog" %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+      <li class="contact_icon">
+        <a href="http://codepen.io/recanti/">CodePen</a>
       </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+      <li class="contact_icon">
+        <a href="https://github.com/recanti">GitHub</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="content">
+    <div class="postlist">
+      <h1 class="postlist_header">Projects</h1>
+      <ul class="postlist_items">
+        {% for post in site.posts %}
+          {% if post.category == "project" %}
+          <li class="post">
+            <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+            <h2>
+              <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="postlist">
+      <h1 class="postlist_header">Blog</h1>
+      <ul class="postlist_items">
+        {% for post in site.posts %}
+          {% if post.category == "blog" %}
+          <li class="post">
+            <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+              <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+<!--   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>
