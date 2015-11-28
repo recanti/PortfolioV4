@@ -19,35 +19,35 @@
 // $small-font-size:  $base-font-size * 0.875;
 // $base-line-height: 1.5;
 
-$susy: (
-  columns: 16,
-  gutters: 0,
-  container: 1000px,
-  math: fluid,
-  output: float,
-  gutter-position: inside,  
-  debug: (
-    image: show,
-    color: rgba(#66f, .25),
-    output: overlay,
-    toggle: top right,
-  )
-);
+// $susy: (
+//   columns: 16,
+//   gutters: 0,
+//   container: 1000px,
+//   math: fluid,
+//   output: float,
+//   gutter-position: inside,  
+//   debug: (
+//     image: show,
+//     color: rgba(#66f, .25),
+//     output: overlay,
+//     toggle: top right,
+//   )
+// );
 
 
 //TEMP FOR GETTING THE HANG OF LAYOUT
-.home {
-	@include container;
-}
+// .home {
+// 	@include container;
+// }
 
-.navigation {
-	@include span(16);
-}
+// .navigation {
+// 	@include span(16);
+// }
 
-.content {
-	@include span(12)
-}
+// .content {
+// 	@include span(12)
+// }
 
-.contact {
-	@include span(4 last);
-}
+// .contact {
+// 	@include span(4 last);
+// }

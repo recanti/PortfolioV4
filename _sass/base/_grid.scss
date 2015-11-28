@@ -1,0 +1,12 @@
+// Define the grid for the site using Susy
+$susy: (
+  container: 1000px,
+  columns: 12,
+  global-box-sizing: border-box,
+  gutter-position: after,
+  debug: (
+    image: show,
+    output: overlay,
+    toggle: top right
+  )
+);

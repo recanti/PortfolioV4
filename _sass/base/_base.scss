@@ -1,5 +1,7 @@
 // This section lays the groundwork for the rest of the site, defining the 
 // basic typography rules and styling for individual elements. These
-// elements can be combined to form more complicated components
+// elements form the building block for more complex elements in the components
+// section.
 @import "typography";
+@import "grid";
 @import "reset";

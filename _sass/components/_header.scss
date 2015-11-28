@@ -2,4 +2,5 @@
 .header {
 	font-family: $header-font-family;
 	@include font-sizing($header-font-size);
+	@include span(12);
 }
