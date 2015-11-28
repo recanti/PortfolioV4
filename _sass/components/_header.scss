@@ -1,0 +1,5 @@
+// Style the header bar that will appear on each page of the site
+.header {
+	font-family: $header-font-family;
+	@include font-sizing($header-font-size);
+}

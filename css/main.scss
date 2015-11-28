@@ -2,20 +2,22 @@
 # The main Sass file, where all of our variables are declared
 ---
 
-/*
- * Import vendors
- */
+// Import all styles
 @import "vendors/susy/susy";
+
+@import "base/base";
+@import "pages/pages";
+@import "components/components";
 
 /*
  * Declare variables
  */
-$base-font-family: "Ubuntu", Helvetica, Arial, sans-serif;
-$header-font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+// $base-font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+// $header-font-family: "Ubuntu", Helvetica, Arial, sans-serif;
 
-$base-font-size:   14pt;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// $base-font-size:   14pt;
+// $small-font-size:  $base-font-size * 0.875;
+// $base-line-height: 1.5;
 
 $susy: (
   columns: 16,
