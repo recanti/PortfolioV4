@@ -1,0 +1,14 @@
+// This defines the styling for a post element. A post is a list item contained
+//  in a postlist. 
+//
+// _link:	- a link to the post page. Wraps all post content.
+// _title:	- the title of the post
+// _meta:	- metadata associated with the post.
+.post {
+	@include on-hover(border-left);
+	border-left: 0;
+
+	&:hover {
+		border-left: 10px solid black;
+	}
+}

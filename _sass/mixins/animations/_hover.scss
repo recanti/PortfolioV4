@@ -1,0 +1,6 @@
+// When the user hovers over certain elements and components, a property is
+// animated. This mixin provides a consistent and easy way of animating these
+// properties
+@mixin on-hover($property) {
+	transition: $property .15s ease;
+}
