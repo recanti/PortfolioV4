@@ -9,10 +9,6 @@ layout: default
     <h2 class="navigation_subheader">Web Developer and Designer</h2>
   </nav> -->
 
-  <header class="header">
-    Ben Wilcox
-  </header>
-
   <div class="contact">
     <ul class="contact_list">
       <li class="contact_icon">
@@ -29,16 +25,16 @@ layout: default
   
   <div class="content">
     <div class="postlist">
-      <h1 class="postlist_header">Projects</h1>
+      <h3 class="postlist_title">Projects</h3>
+<!--       <hr class="postlist_rule" /> -->
       <ul class="postlist_items">
         {% for post in site.posts %}
           {% if post.category == "project" %}
           <li class="post">
-            <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-              <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
+            <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
+              <h3 class="post_title">{{ post.title }}</h3>
+              <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
           </li>
           {% endif %}
         {% endfor %}
@@ -46,23 +42,22 @@ layout: default
     </div>
 
     <div class="postlist">
-      <h1 class="postlist_header">Blog</h1>
+      <h3 class="postlist_title">Blog</h3>
+<!--       <hr class="postlist_rule" /> -->
       <ul class="postlist_items">
         {% for post in site.posts %}
           {% if post.category == "blog" %}
           <li class="post">
-            <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-              <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
+            <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
+              <h3 class="post_title">{{ post.title }}</h3>
+              <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
           </li>
           {% endif %}
         {% endfor %}
       </ul>
     </div>
-  </div>
 
-<!--   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+  </div>
 
 </div>

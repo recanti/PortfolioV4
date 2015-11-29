@@ -1,14 +1,33 @@
 // This defines the styling for a post element. A post is a list item contained
 //  in a postlist. 
 //
-// _link:	- a link to the post page. Wraps all post content.
-// _title:	- the title of the post
-// _meta:	- metadata associated with the post.
+// :hover 	- hover effect to highlight the post.
+// _link	- a link to the post page. Wraps all post content.
+// _title	- the title of the post
+// _meta	- metadata associated with the post.
 .post {
+
+	padding: 0 .5rem 0 .5rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+
 	@include on-hover(border-left);
 	border-left: 0;
 
 	&:hover {
 		border-left: 10px solid black;
+	}
+	&_link {
+		color: black;
+		text-decoration: none;
+	}
+	&_title {
+		font-family: $header-font-family;
+		@include font-sizing($blog-font-size);
+		font-weight: bold;
+	}  
+	&_meta {
+		@include font-sizing($small-font-size);
+		font-style: italic;
 	}
 }

@@ -1,0 +1,10 @@
+// This controls the section that contains links to all content. This appears
+// as an 8-column grid to the left of the contact info in desktop mode, and as
+// a single section that spans the width of the screen on smaller screens.
+.content {
+	@include span(8 of 12);
+
+	@media(max-width: 768px) {
+		@include span(8 of 8);
+	}
+}

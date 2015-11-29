@@ -1,0 +1,23 @@
+// defines the styling for the postlist. The postlist is a container for a
+// group of posts. It contains a title, followed by a horizontal rule, followed
+// by an unordered list.
+// 
+// _title	- the title that describes the common relation between all of the
+// 			  posts, probably the name of the blog.
+// _rule	- a horizontal rule that divides the title from the list
+// _items	- an unordered list that contains all of the lists
+.postlist {
+
+	margin-bottom: 2rem;
+	&_rule {
+	    padding: 0 .5rem 0 .5rem;
+		border-top: 0;
+	    border-bottom: 1px solid black;
+	    border: 1px solid black;
+	}
+	&_title {
+	    font-family: $header-font-family;
+	    padding: 1rem .5rem 1rem .5rem;
+	    @include font-sizing($subheader-font-size);
+	}
+}

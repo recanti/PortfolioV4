@@ -1,6 +1,8 @@
 // Style the header bar that will appear on each page of the site
 .header {
+	@include span(12);
+
+	padding: 1.5rem 0.5rem 1.5rem 0.5rem;
 	font-family: $header-font-family;
 	@include font-sizing($header-font-size);
-	@include span(12);
 }
