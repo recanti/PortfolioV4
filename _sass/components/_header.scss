@@ -1,4 +1,10 @@
-// Style the header bar that will appear on each page of the site
+// Style the main header, the bar that will appear at the top of each page on 
+// the site.
+// 
+// _title 		- the title of the site
+// _subtitle 	- a subtitle for the site
+// _navlist		- navigation to different pages on the site
+// _navitem		- a navigation item in the navlist.
 .header {
 	@include span(12);
 
