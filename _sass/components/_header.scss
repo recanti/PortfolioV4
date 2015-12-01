@@ -4,11 +4,97 @@
 // _title 		- the title of the site
 // _subtitle 	- a subtitle for the site
 // _navlist		- navigation to different pages on the site
-// _navitem		- a navigation item in the navlist.
+// _navitem		- a navigation item in the navlist. It contains an anchor tag
+// 				  which links to the specified page.
 .header {
-	@include span(12);
 
-	padding: 1.5rem 0.5rem 1.5rem 0.5rem;
-	font-family: $header-font-family;
-	@include font-sizing($header-font-size);
+	$content-height: 75px;
+
+	@include span(12);
+	min-height: 150px;
+	display: flex;
+	align-items: center;
+
+	&_content {
+		@include span(12);
+		vertical-align: middle;
+		position: relative;
+
+		// @media (max-width: 768px) {
+		// 	text-align: center;	
+		// }
+		//min-height: $content-height;
+	}
+
+	&_titlegroup {
+		@include span(4);
+		@media (max-width: 768px) {
+			@include span(12);
+		}
+		//position: absolute;
+		//bottom: 0;
+	}
+	&_title {
+		font-family: $header-font-family;
+		padding-left: gutter();
+		@include font-sizing($header-font-size);
+	}
+	&_subtitle {
+		padding-left: gutter();
+		font-family: $base-font-family;
+		@include font-sizing($small-font-size);
+	}
+	&_navlist {
+		@include span(8 last);
+		margin: 1rem 0 1rem 0;
+		//text-align: right;
+		// position: absolute;
+		// bottom: 0;
+		// right: 0;
+		display: flex;
+
+		@media (max-width: 768px) {
+			@include span(12);
+			text-align: center;
+			justify-content: center;
+			//margin: 0 auto;
+		}
+
+	}
+	&_navitem {
+		font-family: $header-font-family;
+		@include font-sizing($blog-font-size);
+		display: inline-block;
+		margin-right: gutter();	
+		box-sizing: content-box;
+		a {
+			display: table-cell;
+			height: $content-height;
+			vertical-align: middle;
+			text-decoration: none;
+			color: colors(black);
+
+			border-bottom: 0;
+			color: colors(black);
+			@include on-hover(border-bottom);
+			&:hover {
+				border-bottom: 5px solid colors(green);
+				color: colors(green);
+			}
+			@media (max-width: 768px) {
+				//@include font-sizing($base-font-size);
+				text-align: center;
+			}
+		}
+
+		@media (max-width: 768px) {
+			@include font-sizing($base-font-size);
+			text-align: center;
+		}
+
+	}
 }
+
+// * {
+// 	outline: 1px solid black;
+// }
