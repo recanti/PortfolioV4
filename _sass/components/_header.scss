@@ -28,6 +28,9 @@
 
 	&_titlegroup {
 		@include span(4);
+		a {
+			@include link-reset;
+		}
 		@media (max-width: 768px) {
 			@include span(12);
 		}
@@ -47,11 +50,12 @@
 	&_navlist {
 		@include span(8 last);
 		margin: 1rem 0 1rem 0;
-		//text-align: right;
-		// position: absolute;
+		text-align: right;
+		//position: absolute;
 		// bottom: 0;
 		// right: 0;
 		display: flex;
+		justify-content: flex-end;
 
 		@media (max-width: 768px) {
 			@include span(12);
@@ -66,13 +70,12 @@
 		@include font-sizing($blog-font-size);
 		display: inline-block;
 		margin-right: gutter();	
-		box-sizing: content-box;
 		a {
+			box-sizing: border-box;
 			display: table-cell;
 			height: $content-height;
 			vertical-align: middle;
-			text-decoration: none;
-			color: colors(black);
+			@include link-reset;
 
 			border-bottom: 0;
 			color: colors(black);
@@ -94,7 +97,3 @@
 
 	}
 }
-
-// * {
-// 	outline: 1px solid black;
-// }

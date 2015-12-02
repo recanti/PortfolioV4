@@ -10,5 +10,8 @@ url: "http://benjwilcox.com" # the base hostname & protocol for your site
 twitter_username: reccanti
 github_username:  recanti
 
+# page references
+home_page: "/index.html"
+
 # Build settings
 markdown: kramdown

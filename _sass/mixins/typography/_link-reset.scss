@@ -1,0 +1,5 @@
+// A mixin that removes styling from links
+@mixin link-reset {
+	color: colors(black);
+	text-decoration: none;
+}
