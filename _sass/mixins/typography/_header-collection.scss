@@ -1,0 +1,5 @@
+// A convenience mixin for applying common header attributes
+@mixin header-collection {
+	font-family: $header-font-family;
+	color: colors(black);
+}

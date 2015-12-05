@@ -9,9 +9,13 @@ projectsurl: "/projects/"
 url: "http://benjwilcox.com" # the base hostname & protocol for your site
 twitter_username: reccanti
 github_username:  recanti
-
 # page references
-home_page: "/index.html"
-
+home_link: "/index.html"
+about_link: "/about.html"
+projects_link: projects
+blog_link: "#blog"
+resume_link: "#"
+contact_link: "#contact" 
+hire_link: "#"
 # Build settings
 markdown: kramdown

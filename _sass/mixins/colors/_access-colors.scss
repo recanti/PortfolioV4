@@ -1,7 +1,7 @@
 // a convenience function that accesses the color value of a sass-map. If the
 // color is not found, return black.
 // 
-// c 	- the color to search the map for.
+// $c 	- the color to search the map for.
 @function colors($c) {
 	@if map-has-key($colors, $c) {
 		@return map-get($colors, $c);

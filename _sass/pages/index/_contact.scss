@@ -1,10 +1,33 @@
 // This styles the contact information. On a desktop, this appears as a
 // sidebar, but on smaller screens, it appears as a bar that spans the width of
 // the screen.
+// 
+// _list: inside the main contact block is a list, which contains all contacts
+// _link: a list item in .contact_list which contains a link to the content
+// _icon: the social media icon that is contained in each .contact_link
+// _name: the name of the social media site contained in each .contact_link
 .contact {
-	@include span(4 of 12 last);
-
+	@include span(3 of 12 last);
+	padding: 1rem;
 	@media (max-width: 768px) {
 		@include span(8 of 8);
+	}
+	&_list {
+		@media(max-width: 768px) {
+			text-align: center;
+		}
+	}
+	&_link {
+		margin-right: gutter();
+		a {
+			@include link-reset;
+		}
+		@media(max-width: 768px) {
+			display: inline-block;
+		}
+	}
+	&_icon {
+		height: $base-font-size;
+		width: auto;
 	}
 }

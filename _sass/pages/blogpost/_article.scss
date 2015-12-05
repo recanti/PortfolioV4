@@ -1,0 +1,63 @@
+// The default blog content is relatively unstyled. This file styles all of the
+// contents of a blog article.
+// 
+// _header: A header that appears at the top of every article. It consists of a
+// 			header tag overlayed on top of an image.
+.article {
+	box-sizing: border-box;
+	padding: 0.5rem;
+	@include span(12);
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $header-font-family;
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
+
+	&_header {
+		position: relative;
+		margin-bottom: 1rem;
+
+		h2 {
+			box-sizing: border-box;
+      		@include font-sizing($subheader-font-size);
+	      	font-weight: bold;
+
+	      	position: absolute;
+			padding: 1rem;
+			width: 100%;
+	      	
+	      	background-color: colors(black);
+	      	background: linear-gradient(colors(translucentblack), colors(transparent));
+	      	height: 75px;
+	      	color: colors(white);
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	h2 {
+		@include font-sizing($subheader-font-size);
+	}
+	h3 {
+		@include font-sizing($blog-font-size);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	a {
+		@include link-reset;
+		font-weight: bold;
+		color: colors(green);
+	}
+}

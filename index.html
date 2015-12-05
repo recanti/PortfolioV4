@@ -9,31 +9,43 @@ layout: default
     <h2 class="navigation_subheader">Web Developer and Designer</h2>
   </nav> -->
 
-  <div class="contact">
+  <div class="contact" id="contact">
     <ul class="contact_list">
-      <li class="contact_icon">
-        <a href="https://twitter.com/reccanti">Twitter</a>
+      <li class="contact_link">
+        <a href="https://twitter.com/reccanti">
+          <img class="contact_icon" src="./media/icons/twitter.svg" />
+          <span class="contact_name">Twitter</span>
+        </a>
       </li>
-      <li class="contact_icon">
-        <a href="http://codepen.io/recanti/">CodePen</a>
+      <li class="contact_link">
+        <a href="http://codepen.io/recanti/">
+          <img class="contact_icon" src="./media/icons/codepen.svg" />
+          <span class="contact_name">CodePen</span>
+        </a>
       </li>
-      <li class="contact_icon">
-        <a href="https://github.com/recanti">GitHub</a>
+      <li class="contact_link">
+        <a href="https://github.com/recanti">
+          <img class="contact_icon" src="./media/icons/github.svg" />
+          <span class="contact_name">GitHub</span>
+        </a>
       </li>
     </ul>
   </div>
   
   <div class="content">
-    <div class="postlist">
+    <div class="postlist" id="projects">
       <h3 class="postlist_title">Projects</h3>
-<!--       <hr class="postlist_rule" /> -->
+      <hr class="postlist_rule" />
       <ul class="postlist_items">
         {% for post in site.posts %}
           {% if post.category == "project" %}
           <li class="post">
             <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
-              <h3 class="post_title">{{ post.title }}</h3>
               <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <h3 class="post_title">{{ post.title }}</h3>
+              <p class="post.exceprt">
+              {{ post.description }}
+              </p>
             </a>
           </li>
           {% endif %}
@@ -41,16 +53,19 @@ layout: default
       </ul>
     </div>
 
-    <div class="postlist">
+    <div class="postlist" id="blog">
       <h3 class="postlist_title">Blog</h3>
-<!--       <hr class="postlist_rule" /> -->
+      <hr class="postlist_rule" />
       <ul class="postlist_items">
         {% for post in site.posts %}
           {% if post.category == "blog" %}
           <li class="post">
             <a class="post_link" href="{{ post.url | prepend: site.baseurl }}">
-              <h3 class="post_title">{{ post.title }}</h3>
               <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <h3 class="post_title">{{ post.title }}</h3>
+              <p class="post_excerpt">
+                {{ post.description }}
+              </p>
             </a>
           </li>
           {% endif %}
