@@ -15,6 +15,7 @@
 	display: flex;
 	align-items: center;
 	border-bottom: 3px solid colors(orange);
+	margin-bottom: 2rem;
 
 	&_content {
 		@include span(12);
@@ -28,6 +29,7 @@
 	}
 
 	&_titlegroup {
+		margin: 2rem 0 1rem;
 		@include span(4);
 		a {
 			@include link-reset;
@@ -41,7 +43,9 @@
 	&_title {
 		@include header-collection;
 		padding-left: gutter();
-		@include font-sizing($header-font-size);
+		font-size: $header-font-size;
+		font-weight: bold;
+		//@include font-sizing($header-font-size);
 	}
 	&_subtitle {
 		padding-left: gutter();
@@ -52,42 +56,39 @@
 		@include span(8 last);
 		margin: 1rem 0 1rem 0;
 		text-align: right;
-		//position: absolute;
-		// bottom: 0;
-		// right: 0;
 		display: flex;
 		justify-content: flex-end;
-
 		@media (max-width: 768px) {
 			@include span(12);
 			text-align: center;
 			justify-content: center;
-			//margin: 0 auto;
+			margin: 0;
 		}
 
 	}
 	&_navitem {
-		font-family: $header-font-family;
 		@include font-sizing($blog-font-size);
 		display: inline-block;
 		margin-right: gutter();	
 		a {
+			@include link-reset;
+			color: colors(black);
 			box-sizing: border-box;
 			display: table-cell;
 			height: $content-height;
 			vertical-align: middle;
-			@include link-reset;
 
 			border-bottom: 0;
-			color: colors(black);
 			@include on-hover(border-bottom);
 			&:hover {
 				border-bottom: 5px solid colors(green);
 				color: colors(green);
 			}
 			@media (max-width: 768px) {
-				//@include font-sizing($base-font-size);
 				text-align: center;
+			}
+			@media (max-width: 480px) {
+				@include font-sizing($base-font-size);
 			}
 		}
 

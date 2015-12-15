@@ -1,0 +1,6 @@
+.about_header {
+	color: black;
+	@include font-sizing($subheader-font-size);
+	font-weight: bold;
+
+}

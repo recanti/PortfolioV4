@@ -1,0 +1,46 @@
+// This controls the look of the Resume page
+.resume {
+
+	&_title {
+		@include header-collection;
+		@include font-sizing($header-font-size);
+		@include span(9 of 12);
+		margin: 0.5rem 0;
+		@media (max-width: 768px) {
+			@include span(12 of 12);
+		}
+	}
+
+	&_section {
+		@include span(12 of 12);
+		margin-bottom: 2rem;
+	}
+
+	&_header {
+		@include font-sizing($subheader-font-size);
+		color: colors(black);
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	&_listing {
+		color: colors(black);
+		font-weight: bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	&_link {
+		&:hover {
+			color: colors(green);
+		}
+		transition: color .15s ease;
+		margin: 1rem 0;
+		@include span(3 of 12 last);
+		@media (max-width: 768px) {
+			@include span(12 of 12);
+		}
+	}
+}

@@ -9,7 +9,6 @@
 
 	padding: 0 .5rem 0 .5rem;
 	margin-bottom: 1rem;
-	margin-left: 1rem;
 	//border-top: 1px solid colors(orange);
 
 	@include on-hover(border-left);
@@ -23,12 +22,13 @@
 		text-decoration: none;
 	}
 	&_title {
-		font-family: $header-font-family;
+		@include header-collection;
 		@include font-sizing($blog-font-size);
 		font-weight: bold;
 	}  
 	&_meta {
 		@include font-sizing($small-font-size);
 		font-style: italic;
+		color: colors(black);
 	}
 }

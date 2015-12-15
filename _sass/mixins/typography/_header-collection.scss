@@ -2,4 +2,5 @@
 @mixin header-collection {
 	font-family: $header-font-family;
 	color: colors(black);
+	font-weight: bold;
 }

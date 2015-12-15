@@ -19,8 +19,7 @@
 	    //border: 1px solid black;
 	}
 	&_title {
-	    font-family: $header-font-family;
-	    padding: 1rem .5rem 1rem .5rem;
+	    @include header-collection;
 	    @include font-sizing($subheader-font-size);
 	}
 }
