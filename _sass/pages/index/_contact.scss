@@ -8,26 +8,33 @@
 // _name: the name of the social media site contained in each .contact_link
 .contact {
 	@include span(3 of 12 last);
-	padding: 1rem;
 	@media (max-width: 768px) {
 		@include span(8 of 8);
 	}
 	&_list {
 		@media(max-width: 768px) {
-			text-align: center;
+			//text-align: center;
 		}
 	}
 	&_link {
 		margin-right: gutter();
+		&:hover {
+			color: colors(green);
+		}
 		a {
 			@include link-reset;
 		}
 		@media(max-width: 768px) {
-			display: inline-block;
+			//display: inline-block;
 		}
+		@include font-sizing($small-font-size);
 	}
 	&_icon {
 		height: $base-font-size;
 		width: auto;
+	}
+	&_header {
+		@include header-collection;
+		@include font-sizing($subheader-font-size);
 	}
 }
