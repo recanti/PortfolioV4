@@ -5,7 +5,7 @@ layout: default
 	{% if page.header %}
 		<header class="article_header">
 			<h2> {{ page.title }} </h2>
-			<img src="{{ page.header | prepend: site.projectsurl }}" alt="main page for ADS" />
+			<img src="{{ page.header | prepend: site.baseurl }}" alt="project image" />
 		</header>
 	{% else %}
 		<h2>{{ page.title }}</h2>
